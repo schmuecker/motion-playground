@@ -1,5 +1,6 @@
 import { animated, useTransition } from "@react-spring/web";
 import { toast, Toaster } from "react-hot-toast";
+import { useToaster } from "react-hot-toast";
 import { tw } from "twind";
 import Button from "../../components/Button";
 import Dot from "../../components/Dot";
@@ -42,6 +43,10 @@ function Message({
 }
 
 function Toast() {
+  // Get toast notifications
+  const { toasts } = useToaster();
+  const hasToast = toasts.filter((t) => t.visible).length > 0;
+
   return (
     <div className={tw`h-auto`}>
       <Toaster toastOptions={{ duration: 2000 }} />
@@ -49,13 +54,15 @@ function Toast() {
         bg="purple"
         text="Show toast"
         onClick={() => {
-          toast.custom((t) => (
-            <Message
-              text="AirPods Pro"
-              subtext="Connected"
-              visible={t.visible}
-            />
-          ));
+          // Only create toast if there's not one already
+          !hasToast &&
+            toast.custom((t) => (
+              <Message
+                text="AirPods Pro"
+                subtext="Connected"
+                visible={t.visible}
+              />
+            ));
         }}
       />
     </div>
