@@ -1,7 +1,15 @@
-import { styled } from "@twind/react";
+import { ReactNode } from "react";
 
-const Card = styled("div", {
-  base: `p-6 h-auto bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700`,
-});
+interface CardProps {
+  children: ReactNode;
+}
+
+function Card({ children }: CardProps) {
+  return (
+    <div className="h-auto rounded-lg border border-gray-200 bg-white p-6 shadow-md dark:border-gray-700 dark:bg-gray-800">
+      {children}
+    </div>
+  );
+}
 
 export default Card;

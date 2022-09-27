@@ -10,13 +10,11 @@
   },
   "dependencies": {
     "@react-spring/web": "^9.5.4",
-    "@twind/react": "^0.0.4",
     "clsx": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
-    "react-use": "^17.4.0",
-    "twind": "^0.16.17"
+    "react-use": "^17.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
