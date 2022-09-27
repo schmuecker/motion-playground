@@ -22,7 +22,7 @@ function Message({ text, subtext, visible }: MessageProps) {
       item && (
         <animated.div
           style={styles}
-          className="inline-block w-auto rounded-full bg-black py-5 pl-6  pr-12 font-sans"
+          className="inline-block w-auto rounded-full bg-black/25 py-5 pl-6 pr-12 font-sans backdrop-blur-sm"
         >
           <div className={"flex items-center gap-5"}>
             <Dot w={45} h={45} color="#4ade80" border="#fff" borderWidth={1} />
