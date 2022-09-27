@@ -50,13 +50,16 @@ function Nudge() {
         bg="purple"
         text="Show toast"
         onClick={() => {
-          toast.custom((t) => (
-            <Message
-              text="AirPods Pro"
-              subtext="Connected"
-              visible={t.visible}
-            />
-          ));
+          toast.custom(
+            (t) => (
+              <Message
+                text="AirPods Pro"
+                subtext="Connected"
+                visible={t.visible}
+              />
+            ),
+            { position: "top-right" }
+          );
         }}
       />
     </div>
