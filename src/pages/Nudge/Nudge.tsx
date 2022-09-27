@@ -41,7 +41,6 @@ function Message({ text, subtext, visible }: MessageProps) {
 }
 
 function Nudge() {
-  // Get toast notifications
   const { toasts } = useToaster();
   const hasToast = toasts.filter((t) => t.visible).length > 0;
 
