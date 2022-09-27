@@ -41,8 +41,6 @@ function Message({ text, subtext, visible }: MessageProps) {
 }
 
 function Nudge() {
-  const { toasts } = useToaster();
-
   return (
     <div className={"h-auto"}>
       <Toaster toastOptions={{ duration: 2000 }} />
