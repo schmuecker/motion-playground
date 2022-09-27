@@ -5,15 +5,13 @@ import { tw } from "twind";
 import Button from "../../components/Button";
 import Dot from "../../components/Dot";
 
-function Message({
-  text,
-  subtext,
-  visible,
-}: {
+interface MessageProps {
   text: string;
   subtext: string;
   visible: boolean;
-}) {
+}
+
+function Message({ text, subtext, visible }: MessageProps) {
   const transitions = useTransition(visible, {
     from: { opacity: 0, y: -80, scale: 1 },
     enter: { opacity: 1, y: 0, scale: 1 },
@@ -42,7 +40,7 @@ function Message({
   );
 }
 
-function Toast() {
+function Nudge() {
   // Get toast notifications
   const { toasts } = useToaster();
   const hasToast = toasts.filter((t) => t.visible).length > 0;
@@ -52,9 +50,8 @@ function Toast() {
       <Toaster toastOptions={{ duration: 2000 }} />
       <Button
         bg="purple"
-        text="Show toast"
+        text="Show nudge"
         onClick={() => {
-          // Only create toast if there's not one already
           !hasToast &&
             toast.custom((t) => (
               <Message
@@ -69,4 +66,4 @@ function Toast() {
   );
 }
 
-export default Toast;
+export default Nudge;
