@@ -22,7 +22,7 @@ function Button({
   return (
     <Container bg={bg} onClick={onClick}>
       <span
-        className={tw`relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0`}
+        className={tw`relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900`}
       >
         {text}
       </span>

@@ -4,9 +4,9 @@ import Nudge from "./pages/Nudge/Nudge";
 
 function App() {
   return (
-    <div className={tw`h-screen w-screen p-8 bg-white dark:bg-gray-900`}>
-      <p className={tw`text-2xl font-medium mb-8`}>motion playground.</p>
-      <p className={tw`text-xl font-bold mb-4`}>Nudge 👈 </p>
+    <div className={tw`h-screen w-screen bg-white p-8 dark:bg-gray-900`}>
+      <p className={tw`mb-8 text-2xl font-medium`}>motion playground.</p>
+      <p className={tw`mb-4 text-xl font-bold`}>Nudge 👈 </p>
       <Card>
         <Nudge />
       </Card>
