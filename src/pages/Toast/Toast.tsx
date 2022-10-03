@@ -1,6 +1,5 @@
 import { animated, useTransition } from "@react-spring/web";
 import { toast, Toaster } from "react-hot-toast";
-import { useToaster } from "react-hot-toast";
 import Button from "../../components/Button";
 import Dot from "../../components/Dot";
 
@@ -43,7 +42,6 @@ function Message({ text, subtext, visible }: MessageProps) {
 function Nudge() {
   return (
     <div className={"h-auto"}>
-      <Toaster toastOptions={{ duration: 2000 }} />
       <Button
         bg="purple"
         text="Show toast"

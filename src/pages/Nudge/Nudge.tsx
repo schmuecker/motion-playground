@@ -22,15 +22,15 @@ function Message({ text, subtext, visible }: MessageProps) {
       item && (
         <animated.div
           style={styles}
-          className="inline-block w-auto rounded-full bg-black/25 py-5 pl-6 pr-12 font-sans backdrop-blur-sm"
+          className="w-auto rounded-full bg-black/25 py-3 pl-4 pr-12 backdrop-blur-sm dark:bg-white/50"
         >
-          <div className={"flex items-center gap-5"}>
+          <div className="flex items-center gap-5 ">
             <Dot w={45} h={45} color="#4ade80" border="#fff" borderWidth={1} />
-            <div className={"flex-grow-0"}>
-              <div className={"flex-grow-0 whitespace-nowrap font-bold"}>
+            <div className="flex-grow-0">
+              <div className="flex-grow-0 whitespace-nowrap font-sans font-bold text-black dark:text-white">
                 {text}
               </div>
-              <div className={"whitespace-nowrap font-bold opacity-60"}>
+              <div className="whitespace-nowrap font-sans font-bold opacity-60">
                 {subtext}
               </div>
             </div>
@@ -51,6 +51,7 @@ function Nudge() {
         bg="purple"
         text="Show nudge"
         onClick={() => {
+          console.log("toast");
           !hasToast &&
             toast.custom((t) => (
               <Message
