@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, AnimationProps } from "framer-motion";
 import { toast, Toaster } from "react-hot-toast";
 import { useToaster } from "react-hot-toast";
 
@@ -11,7 +11,7 @@ interface MessageProps {
   visible: boolean;
 }
 
-const animation = {
+const animation: AnimationProps = {
   initial: { opacity: 0, y: -80, scale: 1 },
   animate: { opacity: 1, y: 0, scale: 1 },
   exit: { opacity: 0, y: 0, scale: 0.75 },
